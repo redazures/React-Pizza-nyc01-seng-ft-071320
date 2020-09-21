@@ -9,14 +9,16 @@ class PizzaForm extends React.Component{
   }
 
   change=(e)=>{
+    e.persist()
     console.log("this is the change", e.target.name,e.target.value)
     if (e.target.name==="non-vegetarian"){this.setState({vegetarian:false})}
-    this.setState({[e.target.name]:e.target.value})
+    this.setState(()=>({[e.target.name]:e.target.value}))
+    // console.log("this is my states", this.state)
   }
 
   submit=(e)=>{
     e.preventDefault()
-    console.log("this is my form submit",this.state)
+    // console.log("this is my form submit",this.state)
     this.props.editPizza(this.state)
     // this.setState(()=>({toppings:"",size:"",vegetarian:""}))
   }
