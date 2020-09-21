@@ -4,8 +4,7 @@
       "id": 1,
       "topping": "Plain",
       "size": "Small",
-      "vegetarian": "Vegetarian",
-      "non-vegetarian": "Not Vegetarian"
+      "vegetarian": true
     },
     {
       "id": 2,
